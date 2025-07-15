@@ -10,7 +10,7 @@ function MoviesPage() {
   const preFetchedMoviesData = useRef(null);
 
   function fetchFromAPI(parameter, searchTerm, page) {
-    const apiKey = ""; // Get your own apiKey at OMDB ;
+    const apiKey = "52d28f2d"; // Get your own apiKey at OMDB ;
     const params = new URLSearchParams({
       apikey: apiKey,
       [parameter]: searchTerm,
@@ -77,15 +77,23 @@ function MoviesPage() {
 
   return (
     <div>
-      <div className="flex font-bold justify-start mt-10 mx-30">
-        <h1 className="text-2xl text-center">Movie Viewer🍿</h1>
-      </div>
-      <div className="flex justify-center mt-10">
-        <SearchBar
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          searchMovies={searchMovies}
-        ></SearchBar>
+      <div className="sticky top-0 z-50 bg-white shadow-md py-4">
+        <div className="flex font-bold justify-center mt-5">
+          <h1 className="text-2xl text-center">Movie Viewer🍿</h1>
+        </div>
+        <div className="flex justify-center mt-10">
+          <SearchBar
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            searchMovies={searchMovies}
+          ></SearchBar>
+          <button
+            className="w-16 shadow-md hover:bg-gray-300 active:bg-white bg-white rounded-[2px] text-center transition-all"
+            onClick={() => searchMovies()}
+          >
+            Search
+          </button>
+        </div>
       </div>
       <div className="py-20 px-30 gap-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 xl:grid-cols-9">
         {movies.map((movie) => (
