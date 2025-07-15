@@ -1,12 +1,9 @@
-# React + Vite
+# Movie Viewer🍿
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Find the next movie to add to your watchlist!
+<img width="1822" height="904" alt="image" src="https://github.com/user-attachments/assets/d2cd6578-95c7-4b58-9310-797701e43083" />
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Only displays data fetched from OMDB
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Used API](https://www.omdbapi.com/)
